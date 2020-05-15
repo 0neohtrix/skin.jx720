@@ -1,12 +1,13 @@
 <window id="25">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+    <menucontroll>9000</menucontrol>
+    <views>51,52,53,54,55</views>
 	<controls>
-		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<include>CommonVideoVizBackground</include>
 		<control type="group">
 			<include>CommonMediaBackground</include>
 		</control>
-		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 		<control type="group">
 			<include>CommonMediaBlackwash</include>
 		</control>
@@ -107,7 +108,7 @@
 					<onleft>50</onleft>
 					<onright>4</onright>
 					<onup>2</onup>
-					<ondown>14</ondown>
+					<ondown>99</ondown>
 				</control>
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
@@ -122,23 +123,36 @@
 					<onleft>3</onleft>
 					<onright>50</onright>
 					<onup>2</onup>
+					<ondown>99</ondown>
+				</control>
+				<control type="radiobutton" id="99">
+					<description>Library button</description>
+					<posx>4</posx>
+					<posy>80</posy>
+					<label>$LOCALIZE[29800]</label>
+					<onclick>ReplaceWindow(VideoFiles)</onclick>
+					<selected>Window.IsVisible(VideoLibrary)</selected>
+					<include>ButtonCommonValues</include>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
 					<ondown>14</ondown>
 				</control>
 				<control type="radiobutton" id="14">
 					<description>Watched Toggle</description>
-					<posx>4</posx>
-					<posy>80</posy>
+					<posx>6</posx>
+					<posy>120</posy>
 					<include>ButtonCommonValues</include>
 					<label>20367</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<onup>3</onup>
+					<onup>99</onup>
 					<ondown>8</ondown>
 				</control>
 				<control type="button" id="8">
 					<description>Search</description>
-					<posx>6</posx>
-					<posy>120</posy>
+					<posx>8</posx>
+					<posy>160</posy>
 					<include>ButtonCommonValues</include>
 					<label>137</label>
 					<onleft>50</onleft>
@@ -148,8 +162,8 @@
 				</control>
 				<control type="radiobutton" id="19">
 					<description>Filter</description>
-					<posx>8</posx>
-					<posy>160</posy>
+					<posx>10</posx>
+					<posy>200</posy>
 					<include>ButtonCommonValues</include>
 					<label>587</label>
 					<onleft>50</onleft>
@@ -159,8 +173,8 @@
 				</control>
 				<control type="radiobutton" id="16">
 					<description>PartyMode</description>
-					<posx>10</posx>
-					<posy>200</posy>
+					<posx>8</posx>
+					<posy>240</posy>
 					<include>ButtonCommonValues</include>
 					<label>589</label>
 					<onleft>50</onleft>
@@ -170,24 +184,13 @@
 				</control>
 				<control type="radiobutton" id="17">
 					<description>Flatten</description>
-					<posx>8</posx>
-					<posy>240</posy>
+					<posx>6</posx>
+					<posy>280</posy>
 					<include>ButtonCommonValues</include>
 					<label>20411</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>16</onup>
-					<ondown>7</ondown>
-				</control>
-				<control type="radiobutton" id="7">
-					<description>Stack toggle</description>
-					<posx>6</posx>
-					<posy>280</posy>
-					<include>ButtonCommonValues</include>
-					<label>346</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>17</onup>
 					<ondown>11</ondown>
 				</control>
 				<control type="radiobutton" id="11">
@@ -201,7 +204,7 @@
 					<visible>System.HasLocks</visible>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<onup>7</onup>
+					<onup>17</onup>
 					<ondown>610</ondown>
 				</control>
 				<control type="button" id="610">
